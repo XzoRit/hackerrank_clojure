@@ -2,8 +2,8 @@
   (:gen-class))
 
 (defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
+  "typical hello world"
+  [& _]
   (println "Hello, World!"))
 
 (defn list-replication [num lst]
