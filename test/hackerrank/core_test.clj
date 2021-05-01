@@ -1,13 +1,13 @@
 (ns hackerrank.core-test
-  (:require [clojure.test :refer :all]
-            [hackerrank.core :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            [hackerrank.core :refer [list-replication filter-array filter-position array-of-n-elements]]))
 
-(clojure.test/deftest test-list-replication
-    (clojure.test/is (= () (hackerrank.core/list-replication 0 ())))
-    (clojure.test/is (= () (hackerrank.core/list-replication 9 ())))
-    (clojure.test/is (= '(1) (hackerrank.core/list-replication 1 '(1))))
-    (clojure.test/is (= '(1 22 333) (hackerrank.core/list-replication 1 '(1 22 333))))
-    (clojure.test/is (= '(1 1 1 22 22 22 333 333 333) (hackerrank.core/list-replication 3 '(1 22 333)))))
+(deftest test-list-replication
+    (is (= () (list-replication 0 ())))
+    (is (= () (list-replication 9 ())))
+    (is (= '(1) (list-replication 1 '(1))))
+    (is (= '(1 22 333) (list-replication 1 '(1 22 333))))
+    (is (= '(1 1 1 22 22 22 333 333 333) (list-replication 3 '(1 22 333)))))
 
 (deftest test-filter-array
     (is (= () (filter-array 5 ())))
